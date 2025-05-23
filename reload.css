@@ -1,0 +1,73 @@
+.button-reload {
+    position: fixed;
+    top: 1vw;
+    right: 1vw;
+    cursor: pointer;
+    border: none;
+    background:  #00d4ff;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    font-weight: 600;
+    font-size: 10px;
+  }
+  
+  .button__text {
+    position: absolute;
+    inset: 0;
+    animation: text-rotation 8s linear infinite;
+  
+    > span {
+      position: absolute;
+      transform: rotate(calc(19deg * var(--index)));
+      inset: 7px;
+    }
+  }
+  
+  .button__circle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: #fff;
+    color: #7808d0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button__icon--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button-reload:hover {
+    background: rgb(249, 6, 6);
+    transform: scale(1.05);
+  }
+  
+  .button-reload:hover .button__icon {
+    color: #000;
+  }
+  
+  .button-reload:hover .button__icon:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .button-reload:hover .button__icon--copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0);
+  }
+  
+  @keyframes text-rotation {
+    to {
+      rotate: 360deg;
+    }
+  }
+  
