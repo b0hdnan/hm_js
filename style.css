@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
@@ -45,7 +52,7 @@ body {
     text-shadow: 2px 2px 3px rgb(249, 6, 6);
 }
 
-.title div{
+.title div {
     margin-inline: 20px;
 }
 
